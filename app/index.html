@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="todo-container">
+        <h1>Lista de tareas</h1>
+        
+        <form id="todo-form" class="todo-form">
+            <div class="input-group">
+                <label for="task-input">Nueva tarea</label>
+                <input 
+                    type="text" 
+                    id="task-input" 
+                    name="task" 
+                    placeholder="Escribe una nueva tarea..." 
+                    autocomplete="off"
+                >
+            </div>
+            <button type="submit" id="add-btn">Agregar</button>
+        </form>
+
+        <p id="error-msg" class="error-message" aria-live="polite" hidden></p>
+
+        <section class="tasks-section" aria-label="Tareas pendientes y completadas">
+            <ul id="task-list" class="task-list">
+                <!-- Las tareas se renderizan dinámicamente aquí -->
+            </ul>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
