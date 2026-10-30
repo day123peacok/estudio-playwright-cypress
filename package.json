@@ -7,7 +7,7 @@
     "start": "http-server app -p 4173 -c-1",
     "test:pw": "playwright test",
     "test:cy": "cypress run",
-    "test:all": "npm run test:pw && npm run test:cy"
+    "test:all": "start-server-and-test start 4173 \"npm run test:pw && npm run test:cy\""
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,7 @@
   "devDependencies": {
     "@playwright/test": "^1.64.1",
     "cypress": "^16.2.0",
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "start-server-and-test": "^3.0.13"
   }
 }
